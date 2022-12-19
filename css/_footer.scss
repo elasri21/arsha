@@ -1,0 +1,109 @@
+footer {
+    .links {
+        padding: 60px 0;
+        background-color: $white;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            .contact-info {
+                h3 {
+                    font-size: 40px;
+                    text-transform: uppercase;
+                    color: $main-color;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 14px;
+                    color: $grey-text;
+                    margin-bottom: 10px;
+                }
+            }
+            .small-title {
+                h3 {
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    color: $main-color;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 15px;
+                    color: $text-color;
+                    line-height: 1.5;
+                    margin-bottom: 20px;
+                }
+                .social {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    a {
+                        width: 30px;
+                        height: 30px;
+                        background-color: $sky-blue;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        i {
+                            color: $white;
+                        }
+                        &:hover {
+                            background-color: $sky-hover;
+                        }
+                    }
+                }
+            }
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        color: $grey-text;
+                        text-transform: capitalize;
+                        font-weight: 16px;
+                        font-weight: 400;
+                        i {
+                            color: $sky-blue;
+                            font-size: 14px;
+                        }
+                        &:hover {
+                            color: $sky-blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copy-right {
+        padding: 30px 0;
+        background-color: $main-color;
+        .container {
+            @media (max-width: 500px) {
+                justify-content: center !important;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            p {
+                font-size: 15px;
+                color: $white;
+                font-weight: 400;
+                span {
+                    font-weight: 700;
+                }
+                a {
+                    font-weight: 600;
+                    color: $sky-blue;
+                    &:hover {
+                        color: $sky-hover;
+                    }
+                }
+            }
+        }
+    }
+}

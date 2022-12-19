@@ -1,0 +1,192 @@
+/* start header rules */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+            a {
+                font-size: 40px;
+                font-weight: 600;
+                color: $white;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+        @media (min-width: 950px) {
+            nav {
+                display: block !important;
+                ul {
+                    li {
+                        a, &.drop-down {
+                            font-size: 16px;
+                            text-transform: capitalize;
+                            letter-spacing: .5px;
+                            color: $white;
+                            font-weight: 400;
+                            &.active {
+                                color: $sky-blue;
+                            }
+                            &:hover {
+                                color: $sky-blue;
+                            }
+                            &.btn-shape {
+                                &:hover {
+                                    background-color: $sky-blue;
+                                    color: $white;
+                                }
+                            }
+                        }
+                        &.drop-down {
+                            position: relative;
+                            cursor: pointer;
+                            &:hover {
+                                & > ul {
+                                    display: flex !important;
+                                    li {
+                                        width: 100% !important;
+                                        color: $main-color !important;
+                                        &.drop-down {
+                                            position: relative;
+                                            &:hover {
+                                                color: $sky-blue !important;
+                                            }
+                                        }
+                                        a {
+                                            color: $main-color !important;
+                                            &:hover {
+                                                color: $sky-blue !important;
+                                            }
+                                        }
+                                        & > ul {
+                                            position: absolute;
+                                            right: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        ul {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            right: 100%;
+                            width: 180px;
+                            box-shadow: 0 0 5px #ccc;
+                            padding: 20px 15px;
+                            background-color: $white;
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+            .open {
+                display: none !important;
+            }
+            .close {
+                display: none !important;
+            }
+        }
+        @media (max-width: 949px) {
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                ul {
+                    flex-direction: column;
+                    background-color: $white;
+                    padding: 25px 15px;
+                    li {
+                        width: 100%;
+                        color: $main-color !important;
+                        a {
+                            color: $main-color !important;
+                            &:hover  {
+                                color: $sky-blue !important;
+                            }
+                            &.btn-shape {
+                                width: 100%;
+                                &:hover {
+                                    color: $white !important;
+                                }
+                            }
+                        }
+                        &.drop-down {
+                            &:hover {
+                                color: $sky-blue !important;
+                            }
+                            ul {
+                                // display: flex;
+                                // flex-direction: column;
+                                // gap: 20px;
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        nav {
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                li {
+                    a, &.drop-down {
+                        font-size: 16px;
+                        text-transform: capitalize;
+                        letter-spacing: .5px;
+                        color: $white;
+                        font-weight: 400;
+                        &.active {
+                            color: $sky-blue;
+                        }
+                        &:hover {
+                            color: $sky-blue;
+                        }
+                        &.btn-shape {
+                            &:hover {
+                                background-color: $sky-blue;
+                                color: $white;
+                            }
+                        }
+                    }
+                    &.drop-down {
+                        position: relative;
+                        cursor: pointer;
+                    }
+                    ul {
+                        display: none;
+                        box-shadow: 0 0 5px #ccc;
+                        padding: 20px 15px;
+                        background-color: $white;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+        .close{
+            display: none;
+            i {
+                font-size: 30px;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+        .open{
+            i {
+                font-size: 30px;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+}
+/* end header rules */

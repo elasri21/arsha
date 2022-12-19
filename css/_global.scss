@@ -1,0 +1,88 @@
+/* start global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth; 
+}
+body {
+    font-family: $text-family;
+    background-color: $main-bg;
+    perspective: 600px;
+}
+section {
+    padding: 60px 0;
+}
+.container {
+    @media (min-width: 1200px) {
+        margin-left: 80px !important;
+        margin-right: 80px !important;
+    }
+    @media (min-width: 922px) and (max-width: 1199px) {
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+    }
+    @media (min-width: 768px) and (max-width: 921px) {
+        margin-left: 30px !important;
+        margin-right: 30px !important;
+    }
+    margin-left: 20px;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    transition: .3s;
+}
+ul {
+    list-style: none;
+}
+input, textarea {
+    border: none;
+    background: none;
+    outline: none;
+    transition: .3s;
+}
+textarea {
+    resize: none;
+    height: 120px;
+}
+.pattern {
+    h2 {
+        font-size: 40px;
+        font-weight: 600;
+        color: $main-color;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        margin: 0 auto 40px;
+        width: fit-content;
+        &::before, &::after {
+            content: "";
+            width: 90%;
+            height: 1px;
+            background-color: $before-bg;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: calc(100% + 15px);
+        }
+        &::after {
+            width: 50%;
+            height: 2px;
+            background-color: $sky-blue;
+        }
+    }
+    p {
+        text-align: center;
+        font-size: 16px;
+        color: $text-color;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+}
+.hide {
+    display: none;
+}
+/* end global rules */

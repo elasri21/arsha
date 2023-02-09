@@ -811,6 +811,9 @@ header .container .open i {
 .portfolio .container .images .image:hover .info {
   display: flex;
 }
+.portfolio .container .images .image.hide {
+  display: none;
+}
 
 /* end portfolio */
 /* start team */

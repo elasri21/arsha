@@ -50,3 +50,25 @@ questions.forEach(question => {
         this.nextElementSibling.classList.toggle("hide");
     });
 });
+
+//portfolio
+const categories = Array.from(document.querySelectorAll(".portfolio .shower span"));
+const posts = Array.from(document.querySelectorAll(".portfolio .images .image"));
+categories.forEach(category => {
+    category.addEventListener("click", function() {
+        for(let i = 0; i < categories.length;i++) {
+            categories[i].classList.remove("active");
+        }
+        posts.forEach(post => {
+            if(this.id == post.dataset.id && this.id != "all") {
+                post.classList.remove("hide");
+            } else if(this.id == "all") {
+                post.classList.remove("hide");
+            } else {
+                post.classList.add("hide");
+            }
+        });
+        this.classList.add("active");
+    });
+});
+
